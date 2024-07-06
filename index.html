@@ -2,22 +2,33 @@
 
 <head>
     <title>🐦︎</title>
+    <link rel="icon"
+        href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItZmVhdGhlciI+PHBhdGggZD0iTTIwLjI0IDEyLjI0YTYgNiAwIDAgMC04LjQ5LTguNDlMNSAxMC41VjE5aDguNXoiPjwvcGF0aD48bGluZSB4MT0iMTYiIHkxPSI4IiB4Mj0iMiIgeTI9IjIyIj48L2xpbmU+PGxpbmUgeDE9IjE3LjUiIHkxPSIxNSIgeDI9IjkiIHkyPSIxNSI+PC9saW5lPjwvc3ZnPg==">
+    <script>
+        const imgs = [
+            ["https://www.bilibili.com/opus/941384714519838725", "3d0057827abbd5cce5b9f896d60456ae8902030.jpg"],
+            ["https://pixiv.net/i/107644020", "107644020_p0.jpg"],
+            ["https://pixiv.net/i/68606219", "68606219_p0.png"],
+            ["https://pixiv.net/i/68996677","68996677_p2.png"]
+        ];
+        function chooseImage() {
+            var random = Math.floor(Math.random() * imgs.length);
+            var img = imgs[random][1];
+            var imgurl = imgs[random][0];
+
+            document.getElementById("ImageContainer").innerHTML = ('<a href="' + imgurl + '"><img src="'
+                + img
+                + '" class="center" style="margin-left:auto; margin-right:auto; max-width:80vw; max-height:80vh"></a>');
+        }
+    </script>
 </head>
 
-<body>
-    <div style="text-align:center">
-        <a href="https://www.pixiv.net/en/artworks/68606219">
-            <img src="68606219_p0.png" class="center"
-                style="margin-left:auto; margin-right:auto; max-width:80vw; max-height:80vh">
-        </a>
-    </div>
-    <div style="display: none;">
-        <a href="https://www.pixiv.net/en/artworks/68996677">
-            <img src="68996677_p2.png">
-        </a>
-    </div>
-    <div name="related" style="display: none;">
-        <a href="https://nzmzdoi.github.io/"></a>
+<body onload="chooseImage()">
+    <div style="text-align:center" id="ImageContainer"></div>
+    <div style="display: none">
+        <a href="https://icons8.com/icons/set/bird--static--blue">unused icon</a>
+        <a href="https://nzmzdoi.github.io/">生物教室水族箱</a>
+        <a href="https://stackoverflow.com/a/21648168"></a>
     </div>
 </body>
 
