@@ -13,8 +13,7 @@
         ];
         function chooseImage() {
             var random = Math.floor(Math.random() * imgs.length);
-            var img = imgs[random][1];
-            var imgurl = imgs[random][0];
+            var [imgurl,img] = imgs[random];
 
             document.getElementById("ImageContainer").innerHTML = ('<a href="' + imgurl + '"><img src="'
                 + img
@@ -32,5 +31,6 @@
         <a href="https://stackoverflow.com/a/21648168"></a>
     </div>
 </body>
+
 
 </html>
